@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel index.js -d dist",
-    "start": "standard --fix && babel-node index.js"
+    "build": "babel ./src -d ./",
+    "dev": "babel-node ./src",
+    "start": "node ./dist/index.js"
   },
   "repository": {
     "type": "git",
