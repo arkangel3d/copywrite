@@ -8,8 +8,9 @@ const Nav = ()=>{
   const handleText = (e)=>{
     setText(e.target.value);
   };
-  const handleClick = (a)=>{
-    dispatch(resultText(a));
+  const handleClick = (word)=>{
+    dispatch(resultText(word));
+    setText('');
   }
   return (
     <Container className='nav alignCenter'>

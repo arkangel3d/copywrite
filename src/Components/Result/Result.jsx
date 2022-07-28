@@ -2,10 +2,8 @@ import { Container } from 'react-bootstrap';
 import DataResult from '../DataRender/DataResult';
 import { useSelector } from 'react-redux';
 const Result = ()=>{
-  const result = useSelector(state=>state.text);
-   if(result.length >3){
-    result[0]=result[result.length-1];
-   }
+  const result = useSelector(state=>state.text.slice(-3).reverse());
+   
   return (
     <Container className='result'>
         <Container className='title'>
