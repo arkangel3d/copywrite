@@ -2,7 +2,7 @@
 const textReverse = (req, res) => {
   const text = req.query.text
   const textReverse = text.split('').reverse().join('')
-  const palindrome = text === textReverse
+  const palindrome = text.toLowerCase() === textReverse.toLowerCase()
   const reg = /^[A-Z]+$/i
   if (!text) {
     return res.status(400).json({ error: 'no text' })
