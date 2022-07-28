@@ -11,7 +11,7 @@ const textReverse = (req, res) => {
     }
     if (text.includes(' ') && text.length>3) {
       const textReverse = text.split('').reverse().join('').replace(/\s+/g, '')
-       if(textReverse.toLowerCase()===text.toLowerCase()){
+       if(textReverse.toLowerCase()===text.toLowerCase().replace(/\s+/g, '')){
          palindrome = true
          return res.json({text: text,palindrome})
          }
