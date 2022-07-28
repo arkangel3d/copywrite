@@ -1,9 +1,9 @@
 import { Container } from 'react-bootstrap';
 
-const DataResult = (props)=>{
+const DataResult = ({textResult})=>{
   return (
     <Container className='resultContainer'>
-        <p className='dataResult'> Result 1</p>
+        <p className='dataResult'> {textResult || "Result 1"}</p>
     </Container>
   );
 }
