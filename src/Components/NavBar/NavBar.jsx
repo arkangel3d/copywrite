@@ -8,15 +8,15 @@ const Nav = ()=>{
   const handleText = (e)=>{
     setText(e.target.value);
   };
-  const handleClick = ()=>{
-    dispatch(resultText('Result 1'));
+  const handleClick = (a)=>{
+    dispatch(resultText(a));
   }
   return (
     <Container className='nav alignCenter'>
       <Navbar>
         <Container>
           <input onChange={(e)=>handleText(e)} value={text} placeholder='Insert Text' className='input' type={'text'}/>
-          <Button onClick = {()=> handleClick }className='button' type="button">Send</Button>{' '}
+          <Button onClick = {()=> handleClick(text) }className='button' type="button">Send</Button>{' '}
         </Container>
       </Navbar>
     </Container>

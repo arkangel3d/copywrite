@@ -6,8 +6,7 @@ export default function rootReducer(state = initialState, action) {
   
     if (action.type === RESULT_TEXT) {
       return {
-        ...state,
-         text: action.payload,
+         text: [...state.text, action.payload],
       };
     }
     return state;

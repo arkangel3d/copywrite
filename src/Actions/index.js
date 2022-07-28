@@ -10,7 +10,7 @@ export function dispatchText(data) {
     return function (dispatch) {
     
      
-      return axios.get(`${url}?text=${text}`).then(({ data }) => {
+      return axios.get(`${url}/iecho?text=${text}`).then(({ data }) => {
         dispatch(dispatchText(data));
       })
     };
