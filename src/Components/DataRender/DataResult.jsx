@@ -1,6 +1,6 @@
 import { Container } from 'react-bootstrap';
 
-const DataResult = ({textResult})=>{
+const DataResult = ({textResult,})=>{
  
   return (
     <>
