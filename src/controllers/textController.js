@@ -10,12 +10,13 @@ const textReverse = (req, res) => {
       return res.status(400).json({ error: 'invalid text' })
     }
     if (text.includes(' ') && text.length>3) {
-      const textReverse = text.split('').reverse().join('').replace(/\s+/g, '')
-       if(textReverse.toLowerCase() === text.toLowerCase().replace(/\s+/g, '')) {
+      const textReverse = text.split('').reverse().join('')
+      const textReverseNotSpace = textReverse.replace(/\s+/g, '')
+       if (textReverseNotSpace.toLowerCase() === text.toLowerCase().replace(/\s+/g, '')) {
          
-         return res.json({text: text,palindrome : true})
+         return res.json({ text: text,palindrome: true})
          }
-      return res.json({text: textReverse,palindrome:false})
+      return res.json({ text: textReverse, palindrome: false})
     }
     res.json({text: textReverse,palindrome})
   }
