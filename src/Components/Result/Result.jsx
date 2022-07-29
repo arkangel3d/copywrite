@@ -9,7 +9,7 @@ const Result = ()=>{
     <Container className='result'>
         <Container className='title'>
             <h2>Result:</h2>
-            <p className='notPalindrome'>{error && 'Please enter only letters, no spaces, no symbols, minimum 2 letters'}</p>
+            <p className='notPalindrome'>{error && 'Please enter only letters, no numbers, no symbols, minimum 2 letters'}</p>
         </Container>
         <Container>
             {/* <DataResult textResult={result} /> */}
